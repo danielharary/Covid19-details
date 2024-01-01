@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+    border: 1px solid lightgrey;
+    background-color: whitesmoke;
+    text-align: center;
+  }
+  
+  thead th {
+    padding: 10px;
+  }
+  
+  td {
+    padding: 10px;
+    background-color: whitesmoke;
+  }
+  
+  
+  
