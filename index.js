@@ -147,4 +147,36 @@ var data = [
    }
   }
   buildDropDown(data);
+
+  function buildDropDown(countries){
+    var select = document.getElementById('selectDropDown');
+    for(var i=0;i<countries.length;i++){
+      var option = document.createElement('option');
+      option.value = countries[i].CountryCode;
+      option.innerText = countries[i].Country;
+      select.appendChild(option);
+    } 
+  } 
+  
+  var showResultBtn = document.getElementById("showResult");
+  
+  function addResultToPage(countries) {
+    var dropdown = document.getElementById("selectDropDown");
+    var selectedOptionIndex = dropdown.selectedIndex;
+    var opts = document.getElementsByTagName("option");
+    var countryValue = opts[selectedOptionIndex].value;
+    for (var i = 0; i < countries.length; i++) {
+      if (countries[i].CountryCode == countryValue) {
+        document.getElementById("result").innerText = countries[i].TotalDeaths;
+      }
+    }
+  }
+  
+  showResultBtn.addEventListener("click", function () {
+    addResultToPage(data);
+  });
+  
+  
+  
+  buildDropDown(data);
   
