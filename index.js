@@ -137,4 +137,14 @@ var data = [
     }
   }
   
+  function buildDropDown(countries) { 
+    var select = document.getElementById("selectDropDown");
+   for (var i =0; i<countries.length; i++){
+     var country = document.createElement('option');
+     country.value = countries[i].CountryCode;
+     country.innerText = countries[i].Country
+     select.appendChild(country);
+   }
+  }
+  buildDropDown(data);
   
