@@ -178,5 +178,4 @@ var data = [
   
   
   
-  buildDropDown(data);
   
